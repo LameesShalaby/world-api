@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Noto+Sans+Arabic:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+.container{
+  max-width: 1500px !important;
+}
+body{
+  font-family: "Nunito Sans", sans-serif !important;
+}
+body.light {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(200, 15%, 8%);
 }
 
-.App-logo {
-  height: 40vmin;
+body.dark {
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+}
+body.light .header{
+background-color: hsl(0, 0%, 92%);
+}
+body.dark .header{
+  background-color: hsl(209, 23%, 22%);
+}
+.form-control{
+  border: none !important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+  padding: .375rem 5.75rem !important;
+}
+.toggle-style{
+  cursor: pointer;
+}
+input{
+  height: 60px;
+  color: inherit !important;
+}
+.search-container {
+  position: relative;
+  width: 100%;
+}
+.search-icon {
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%);
   pointer-events: none;
+  font-size: 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body.dark input,
+body.dark input:focus{
+  background-color: hsl(209, 23%, 22%);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dropdown button,
+.dropdown button:focus,
+.dropdown button:hover,
+.dropdown button:active{
+  background-color: inherit;
+  border: none;
+  color: inherit;
+}
+body.dark .dropdown button,
+body.dark .dropdown-menu.show{
+  background-color: hsl(209, 23%, 22%);
+  color: #fff;
+}
+body.dark .dropdown-item{
+  color: #fff;
+}
+.dropdown-item:focus, .dropdown-item:hover{
+  background-color: transparent !important;
+}
+.dropdown-item.active,
+ .dropdown-item:active{
+  background-color: inherit !important;
+  color: inherit !important;
+}
+.dropdown button{
+  border-radius: 6px;
+  height: 60px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #fff;
+  color: hsl(200, 15%, 8%);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
-.App-link {
-  color: #61dafb;
+body.dark ::placeholder{
+  color: #fff;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.country-card{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: none !important;
+  border-radius: 9px !important;
+}
+body.dark .country-card{
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+}
+.country-img-style img{
+  width:-webkit-fill-available;
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.card-body{
+  padding: 30px 22px 50px 22px !important;
+  background-color: transparent !important;
+}
+.country-card p{
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+.card-body .gray-color{
+  color: hsl(0, 0%, 52%);
+  font-weight: 300;
+}
+body.dark .card-body .gray-color{
+  color:hsl(0, 0%, 80%);
 }
